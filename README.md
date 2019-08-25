@@ -1,6 +1,6 @@
 # Pepper Fish Theme
 
-_Pepper_ is a fish theme based on my previous fish prompt I designed, [_Page_](https://github.com/SLIB53/page-fish-theme.git). The prompt shows one level of the current working directory, and colored git branch.
+_Pepper_ is a fish theme based on my previous fish prompt, [_Page_](https://github.com/SLIB53/page-fish-theme.git). The prompt shows one level of the current working directory, and colored git branch.
 
 ![screenshot-hyper-ayu](screenshot.png)
 
