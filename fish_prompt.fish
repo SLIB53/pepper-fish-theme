@@ -3,7 +3,7 @@ function fish_prompt
     printf '\n'
 
     set_color $fish_color_cwd_root
-    printf '  '
+    printf '🐳  '
 
     # print base dir
 
