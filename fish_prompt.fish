@@ -2,8 +2,8 @@ function fish_prompt
 
     printf '\n'
 
-    set_color $fish_color_cwd_root
-    printf '🐳  '
+    set_color blue
+    printf '■  '
 
     # print base dir
 
