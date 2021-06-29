@@ -7,10 +7,10 @@ function fish_prompt
 
     # print base dir
 
-    if test $PWD = "/" >/dev/null ^/dev/null
+    if test $PWD = "/" >/dev/null 2>/dev/null
         set_color --bold $fish_color_cwd_root
         printf \/
-    else if test $PWD = $HOME >/dev/null ^/dev/null
+    else if test $PWD = $HOME >/dev/null 2>/dev/null
         set_color --bold blue
         printf \~
     else
@@ -22,9 +22,9 @@ function fish_prompt
 
     # print git status
 
-    if git rev-parse --is-inside-work-tree >/dev/null ^/dev/null
+    if git rev-parse --is-inside-work-tree >/dev/null 2>/dev/null
 
-        if test -z (git status --porcelain) >/dev/null ^/dev/null
+        if test -z (git status --porcelain) >/dev/null 2>/dev/null
 
             # print clean status
 
