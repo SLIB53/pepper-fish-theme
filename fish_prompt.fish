@@ -7,14 +7,14 @@ function fish_prompt
 
     # print base dir
 
-    if test $PWD = "/" >/dev/null 2>/dev/null
-        set_color --bold $fish_color_cwd_root
+    if test $PWD = / >/dev/null 2>/dev/null
+        set_color --bold --italics $fish_color_cwd_root
         printf \/
     else if test $PWD = $HOME >/dev/null 2>/dev/null
-        set_color --bold blue
+        set_color --bold --italics blue
         printf \~
     else
-        set_color --bold blue
+        set_color --bold --italics blue
         printf (basename $PWD)
     end
     printf ' '
@@ -29,17 +29,20 @@ function fish_prompt
             # print clean status
 
             set_color normal
+            set_color --italics grey
             printf ' '
-            printf (git symbolic-ref --short HEAD; or false); printf ' '
+            printf (git symbolic-ref --short HEAD; or false)
+            printf ' '
 
         else
 
             # print dirty status
 
             set_color normal
-            set_color yellow
+            set_color --italics yellow
             printf ' '
-            printf (git symbolic-ref --short HEAD; or false); printf ' '
+            printf (git symbolic-ref --short HEAD; or false)
+            printf ' '
 
         end
     end
