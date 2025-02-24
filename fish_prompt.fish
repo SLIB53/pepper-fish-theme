@@ -2,9 +2,11 @@ function fish_prompt
 
     printf '\n'
 
+    set_color --italics blue
+    printf "$(whoami)@$(hostnamectl hostname) "
     set_color blue
-    printf '■  '
-
+    printf "▢  "
+    
     # print base dir
 
     if test $PWD = / >/dev/null 2>/dev/null
