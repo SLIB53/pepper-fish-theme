@@ -3,7 +3,7 @@ function fish_prompt
     printf '\n'
 
     set_color blue
-    printf '■  '
+    printf '▪  '
 
     # print base dir
 
