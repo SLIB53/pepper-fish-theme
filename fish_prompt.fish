@@ -8,24 +8,28 @@ function fish_prompt
     # print base dir
 
     if test $PWD = / >/dev/null 2>/dev/null
+        # print root directory
+
         set_color --bold --italics $fish_color_cwd_root
         printf \/
     else if test $PWD = $HOME >/dev/null 2>/dev/null
+        # print home directory
+
         set_color --bold --italics blue
         printf \~
     else
+        # print current directory
+
         set_color --bold --italics blue
         printf (basename $PWD)
     end
-    printf ' '
 
+    printf ' '
 
     # print git status
 
     if git rev-parse --is-inside-work-tree >/dev/null 2>/dev/null
-
         if test -z (git status --porcelain) >/dev/null 2>/dev/null
-
             # print clean status
 
             set_color normal
@@ -33,9 +37,7 @@ function fish_prompt
             printf ' '
             printf (git symbolic-ref --short HEAD; or false)
             printf ' '
-
         else
-
             # print dirty status
 
             set_color normal
@@ -46,11 +48,20 @@ function fish_prompt
 
         end
     end
+
     printf ' '
 
     # print indicator
 
-    set_color normal
-    printf '⋅ '
+    if test -n "$fish_private_mode"
+        # print private status
 
+        set_color magenta
+        printf '⋅ '
+    else
+        # print standard status
+
+        set_color normal
+        printf '⋅ '
+    end
 end
