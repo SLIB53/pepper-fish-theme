@@ -30,22 +30,29 @@ function fish_prompt
 
     if git rev-parse --is-inside-work-tree >/dev/null 2>/dev/null
         if test -z (git status --porcelain) >/dev/null 2>/dev/null
-            # print clean status
+            # clean colors
 
             set_color normal
             set_color --italics grey
-            printf ' '
-            printf (git symbolic-ref --short HEAD; or false)
-            printf ' '
         else
-            # print dirty status
+            # dirty colors
 
             set_color normal
             set_color --italics yellow
+        end
+
+        if test -z (git symbolic-ref -q --short HEAD) >/dev/null 2>/dev/null
+            # print detached
+
+            printf 'ⅹ @'
+            printf (git rev-parse --short HEAD)
+            printf ' '
+        else
+            # print branch
+
             printf ' '
             printf (git symbolic-ref --short HEAD; or false)
             printf ' '
-
         end
     end
 
