@@ -1,8 +1,14 @@
 # Pepper Fish Theme
 
-_Pepper_ is a fish theme based on my previous fish prompt, [_Page_](https://github.com/SLIB53/page-fish-theme.git). The prompt shows one level of the current working directory, and the current git branch.
+_Pepper_ is a fish theme showing an indicator for the system, the current working directory, git status, and a small dot for the prompt indicator.
 
 ![screenshot-ghostty-peppermint](screenshot.png)
+
+
+## Requirements
+
+* git
+
 
 ## Installation & Usage
 
