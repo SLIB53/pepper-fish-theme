@@ -1,6 +1,6 @@
 # Pepper Fish Theme
 
-_Pepper_ is a fish theme showing an indicator for the system, the current working directory, git status, and a small dot for the prompt indicator.
+_Pepper_ is a fish theme showing an indicator for the system, the current working directory, git status, and a bullet for the prompt indicator.
 
 ![screenshot-ghostty-peppermint](screenshot.png)
 
