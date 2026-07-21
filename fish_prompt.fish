@@ -63,6 +63,7 @@ function fish_prompt
     if test -n "$fish_private_mode"
         # print private status
 
+        set_color normal
         set_color magenta
         printf '⋅ '
     else
