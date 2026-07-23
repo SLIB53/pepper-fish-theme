@@ -53,11 +53,11 @@ function pepper_fish_theme_print_cwd --argument-names color show_emblem show_tex
 
     if not test "$show_text" = false
         if test "$PWD" = '/'
-            set --function _text_component (set_color --bold --italics brred)'/'
+            set --function _text_component (set_color --italics brred)'/'
         else if test "$PWD" = "$HOME"
-            set --function _text_component (set_color --bold --italics)'~'
+            set --function _text_component (set_color --italics)'~'
         else
-            set --function _text_component (set_color --bold --italics)(printf '%s' (path basename $PWD))
+            set --function _text_component (set_color --italics)(printf '%s' (path basename $PWD))
         end
     end
 
