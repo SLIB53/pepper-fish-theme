@@ -7,11 +7,11 @@ function _pepper_fish_theme_resolve_environment --argument-names key default_val
     set --local user_key "$prefix$key"
 
     if set --query $override_key
-        set --global $r_key $$override_key
+        set --global --export $r_key $$override_key
     else if set --query $user_key
-        set --global $r_key $$user_key
+        set --global --export $r_key $$user_key
     else
-        set --global $r_key $default_value
+        set --global --export $r_key $default_value
     end
 end
 
