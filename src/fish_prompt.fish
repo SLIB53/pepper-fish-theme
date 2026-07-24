@@ -135,7 +135,7 @@ function pepper_fish_theme_print_sigil
     # Components
 
     if set --query fish_private_mode
-        set --function _sigil_component (printf '\u25cb') # U+25CB (white circle)
+        set --function _sigil_component (printf '\u25D8') # U+25D8 (inverse bullet)
     else
         set --function _sigil_component (printf '\u2219') # U+2219 (bullet operator)
     end
